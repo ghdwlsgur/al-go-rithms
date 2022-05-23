@@ -111,6 +111,9 @@ func (ll *Singly) ReversePartition(left, right int) error {
 	return nil
 }
 
+// left <= pointer <= right
+// left 값은 1보다 크고 right보다는 작아야하며 right 값은 노드의 길이보다 작아야한다.
+// 위 조건을 만족하지 않을 경우 에러를 발생시키는 함수
 func (ll *Singly) CheckRangeFromIndex(left, right int) error {
 	if left > right {
 		return errors.New("left boundary must smaller than right")
@@ -122,7 +125,11 @@ func (ll *Singly) CheckRangeFromIndex(left, right int) error {
 	return nil
 }
 
+// fmt.Print(cur.val, "")
 func (ll *Singly) Display() {
+	// 현재 노드 값 = 연결리스트 헤더(노드)
+	// 노드가 nil이 아닐 때까지 반복
+	// 현재 노드 순회가 끝나면 다음 노드를 순회하여 연결된 모든 노드 순회
 	for cur := ll.Head; cur != nil; cur = cur.Next {
 		fmt.Print(cur.Val, "")
 	}
