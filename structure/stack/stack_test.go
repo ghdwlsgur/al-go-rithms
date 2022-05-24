@@ -1,5 +1,6 @@
 package stack
 
+// stack
 import (
 	"container/list"
 	"reflect"
