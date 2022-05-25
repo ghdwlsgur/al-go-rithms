@@ -130,7 +130,7 @@ func (ll *Doubly) DisplayReverse() {
 	}
 
 	var cur *Node
-	// 마지막 노드로 이동 // health check
+	// 마지막 노드로 이동 // health check request
 	for cur = ll.Head; cur.Next != nil; cur = cur.Next {
 	}
 
